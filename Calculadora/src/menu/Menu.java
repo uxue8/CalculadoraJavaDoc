@@ -1,6 +1,8 @@
 package menu;
+import java.lang.System.Logger;
 import java.util.Scanner;
 public class Menu {
+	
     private static Scanner teclado = new Scanner(System.in);
     
     public int[] pedirNumeros(){
@@ -23,12 +25,16 @@ public class Menu {
                 ));
                 return ret;
     }
+    /**
+     * las opciones que podemos hacer con la calculadora
+     * @return el valor que se ha puesto
+     */
     
     public boolean repetir(){
         boolean ret = false;
         String respuesta;
         do {
-            System.out.print ("¿Desea continuar trabajando con la calculadora? [s / n]");
+            System.out.print ("ï¿½Desea continuar trabajando con la calculadora? [s / n]");
             respuesta = teclado.next();
         } while (!((respuesta.equalsIgnoreCase("s")) || (respuesta.equalsIgnoreCase("n"))
                     ));
@@ -38,4 +44,11 @@ public class Menu {
         }
         return ret;
     }
+    /**
+     * para continuar o no
+     * @return el valor que se ha puesto
+     */
+    
+    
+  
 }
